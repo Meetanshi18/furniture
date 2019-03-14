@@ -1,0 +1,467 @@
+/*to apply the style of all elements of the page*/
+* {
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+/*to change the font accourding to the screen size*/
+html {
+    font-size: 62.5%
+}
+/*media queries*/
+@media only screen and (max-width: 37.5em) {
+    html {
+        font-size: 56.25%;
+    }
+}
+
+@media only screen and (max-width: 56.25em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media only screen and (min-width: 112.5em) {
+    html {
+        font-size: 75%
+    }
+}
+
+/*body styling*/
+body{
+    font-family: "Lato", sans-serif;   
+     /*--*/ /* to define the variable in css*/
+}
+
+header{
+    /*--*/ /* applying different layers on background*/
+    width: 100%;
+    /*--*/
+    /*--*/
+    height: 90vh;
+    
+}
+/*main heading of the page*/
+.heading{
+    /*--*/
+    /*--*/
+    /*--*/
+    position: absolute;
+    /*--*/
+    /*--*/
+    font-size: 8rem;
+    /*--*/
+    /*--*/
+    
+}
+/*sub heading*/
+.sub-heading{
+    font-size: 2rem;
+    /*--*/
+    position: relative;
+    
+}
+/*top line to the sub heading using pseudo element*/
+.sub-heading:before{
+    /*--*/
+    /*--*/
+    height: 3rem;
+    width: 40%;
+    /*--*/
+    /*--*/
+    /*--*/
+    /*--*/
+}
+
+/*bottom line to the sub heading using pseudo element*/
+
+.sub-heading:after{
+    content: "";
+    position: absolute;
+    height: 3rem;
+    width: 50%;
+    left:0;
+    border-bottom: 1.5px solid var(--brown-color);
+    transition: .6s;
+}
+
+/*move the lines when heading is hovered*/
+.heading:hover .main-heading{
+   /*--*/
+   /*--*/
+}
+
+.heading:hover .sub-heading{
+    /*--*/
+    
+}
+.heading:hover .sub-heading:before{
+    width: 40%;
+    right: 60%;
+    transition: .6s;
+}
+.heading:hover .sub-heading:after{
+    width: 90%;
+    left: 5%;
+}
+
+
+
+/*MAIN CONTENT OF THE PAGE*/
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/*STYLE WITH US*/
+.m1{
+    width: 100%;
+    /*--*/   
+}
+.m1__heading{
+    /*--*/
+    /*--*/
+    margin: 5rem;
+    margin: 10rem 0rem;
+    font-size: 4rem;
+    /*--*/
+    position: relative;
+}
+
+/*To apply the pseudo element on the heading text only*/
+.m1 span{
+    position: relative;
+}
+.m1__heading span:before{
+    content: "";
+    position: absolute;
+    width: 16rem;
+    bottom: 0rem;
+    right: -3rem;
+    justify-content: center;
+    /*--*/
+    transition: .7s;
+
+}
+/*heading hover style*/
+.m1__heading span:hover{
+    transform: scale(1.1);
+    transition: .7s;  
+}
+
+/*custom animation for the heading underline*/
+@keyframes m1_heading_animation {
+   /*--*/
+}
+
+
+/*heading hover underline style*/
+.m1__heading span:hover:before{
+    /*--*/
+    width: 21rem;
+    right: 1rem;
+}
+
+/*STYLE WITH US DESIGN*/
+.m1__content{
+    /*--*/ /*set the perspective of the elementv*/
+}
+
+/*image styling*/
+.m1__content--img{    
+    /*--*/
+    /*--*/
+    /*--*/
+    /*--*/
+    /*--*/ /*To maek the image blur*/
+}
+.m1__content--img:before {
+    content: " ";
+    /*--*/
+    /*--*/ /*calculte the size in the image*/
+    /*--*/
+    /*--*/
+    /*--*/
+}
+
+/*make the image come forward*/
+.m1__content--img:hover{
+    /*--*/ /* zoom the image*/
+    z-index: 99;
+    /*--*/ /* make the background dull on imaged hover*/
+    filter: none; /* remove teh filter*/
+}
+
+/*To give bottom shadow to the image*/
+ .m1__content--img:after{
+    /*--*/
+    position: absolute;
+    /*--*/
+    left: 0;
+    /*--*/
+    /*--*/
+    /*--*/
+}
+
+/* make the bottom shadow visible*/
+.m1__content--img:hover:after{
+    /*--*/
+    /*--*/
+/*--*/
+/*--*/
+    transition: .3s;
+}
+
+/*image size*/
+.m1__content img{
+   /*--*/
+    /*--*/
+}
+
+/*to put the images side by side relatively*/
+.m1__content--1{ left: 6%;  }
+.m1__content--2{ left: 12%; }
+.m1__content--3{ left: 20%; }
+.m1__content--4{ left: 30%; }
+.m1__content--5{ left: 40%; }
+.m1__content--6{ left: 50%; }
+.m1__content--7{ left: 60%; }
+.m1__content--8{ left: 70%; }
+.m1__content--9{ left: 80%; }
+
+/*Part 2 styling*/
+/*GALLERY*/
+.m2{
+    padding-top: 1rem;
+    /*--*/
+    /*--*/
+    background-image: linear-gradient(to right,white 8%, rgba(255, 255, 255, 0.81) 70%,white 90%),url(../images/m2-background.jpg);
+    /*--*/
+}
+
+/*GALLERY heading*/
+.m2__heading{
+    margin: 5rem;
+    margin: 10rem 0rem;
+    font-size: 4rem;
+    font-weight: 200;
+    text-align: center;
+    position: relative;
+}
+
+.m2__heading span{
+ position: relative;
+}
+
+/*line on left of heading*/
+.m2__heading span:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    /*--*/
+    /*--*/
+    height: 10%;
+    left: -110%;
+    top:50%;
+    transform: translateY(-50%);
+    transition: .7s;
+}
+/*line on left of heading  (on hover)*/
+
+.m2__heading span:hover:before{
+    width: .5rem;
+    border-top: none;
+    border-bottom: none;
+    /*--*/
+    /*--*/
+    height: 100%;
+    left: -50%;
+}
+
+/*line on right of heading*/
+.m2__heading span:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-top: 4px solid rgba(0, 0, 0, 0.47);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    height: 10%;
+    right: -110%;
+    top:50%;
+    transform: translateY(-50%);
+    transition: .7s;
+}
+.m2__heading span:hover:after{
+    width: .5rem;
+    border-top: none;
+    border-bottom: none;
+    border-left: 4px solid rgba(0, 0, 0, 0.47);
+    border-right: 1px solid rgb(0, 0, 0);
+    height: 100%;
+    right: -50%;
+}
+
+/*Image grid gallery*/
+.m2__content{
+    /*--*/
+    /*--*/
+   /*--*/
+    /*--*/
+    /*--*/
+    left: 50%;
+    /*--*/
+}
+.m2__content img{
+    /*--*/
+    height: 100%;
+    /*--*/
+    transition: .4s;
+}
+.m2__content img:hover{
+   /*--*/
+    height: 100%;
+    object-fit: cover;
+    /*--*/
+    /*--*/
+}
+.m2__content img[src*="5"], .m2__content img[src*="7"]{
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+}
+
+/*Part 3*/
+/*CATEGORIES*/
+.m3{
+     /*--*/
+    margin: 0 auto;
+}
+
+/*CATEGORIES HEADING*/
+.m3__heading{
+    margin: 5rem;
+    margin: 10rem 0rem;
+    font-size: 4rem;
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/*line at the bottom of the heading*/
+.m3__heading span:before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    background-color: black;
+    height: 100%;
+    top:50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.38);
+    transition: .5s;
+}
+
+/*line on right side of the heading*/
+.m3__heading span:after{
+    margin-left: 1.2rem;
+    content: "";
+    position: absolute;
+    width: .3rem;
+    background-color: rgba(0, 0, 0, 0.68);
+    height: 100%;
+    top:50%;
+    transform: translateY(-50%);
+    transition: .5s;
+}
+/*line at the bottom of the heading (on hover)*/
+.m3__heading span:hover:before{
+    /*--*/
+    /*--*/
+    top:100%;
+}
+/*line on right side of the heading (on hover)*/
+
+.m3__heading span:hover:after{
+    /*--*/
+    /*--*/
+}
+
+/*Rotating card*/
+/*card frame*/
+.card{
+    margin: 0 auto;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    width: 62rem;
+    position: relative;
+    height: 41rem;
+    
+}    
+
+/*front side of the card*/
+.card_front{
+    height: 100%;
+    transition: all .8s ease-in;    
+    /*--*/ /* to hide the back of card when rotating*/
+    /*--*/
+}
+
+/*front side card image*/
+.card_front img{
+    height: 100%;
+    z-index: 4;
+}
+
+.card:hover .card_front{
+    /*--*/
+}
+.cart_front--text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    z-index: 8;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    font-size: 4rem;
+    text-shadow: 2px 2px black;
+    
+}
+
+/*Back side of the card*/
+.card_back{
+    height: 100%;
+    /*--*/
+    /*--*/ /* make back card initially rotated*/
+    backface-visibility: hidden; /* to hide the back of card when rotating*/
+    transition: all .8s ease-in;    
+    color: white;
+    text-transform: uppercase; /* make all the text uppercase*/
+    
+}
+
+/*back side card image*/
+.card_back img{
+    height: 100%;
+    z-index: 4;
+    /*--*/ /*applying differnt filters on image*/
+}
+.cart_back--text{
+    position: absolute;
+    /*--*/
+    /*--*/
+    color: white;
+    z-index: 8;
+   /*--*/
+    /*--*/
+    font-weight: 700;
+    line-height: 3.5rem;
+    font-size: 2.3rem;
+}
+.card:hover .card_back{
+    /*--*/
+}
